@@ -11,7 +11,7 @@ First, use some command line magic to create your SSH keys. You'll need these fo
 ```console
 $ sudo apt update
 $ sudo apt install ssh
-$ ssh-keygen -t rsa -b 4096 -C "aaron@ecomaz.net"
+$ ssh-keygen -t rsa -b 4096 -C "david@dwilliamshome.com"
 $ eval $(ssh-agent -s)
 $ ssh-add ~/.ssh/id_rsa
 ```

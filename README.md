@@ -37,7 +37,7 @@ Then, go to [github.com/settings/ssh/new](https://github.com/settings/ssh/new), 
 
 ## Install Yadm
 
-Now that you've got all your keys set up, let's get our `apt` package manager ready, and install [yadm](https://thelocehiliosan.github.io/yadm/):
+Now that you've got all your keys set up, let's get 'yadm' setup.
 
 Linux
 ```console
@@ -49,14 +49,13 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 $ brew install yadm
 ```
 
-
 ## Install dotfiles
 
 Now that yadm is installed, we can go install these dotfiles. They should do everything else for us!
 
 Linux and Mac
 ```console
-yadm clone https://github.com/dwilliamhouston/dotfiles.git
+$ yadm clone https://github.com/dwilliamhouston/dotfiles.git
 ```
 
->The dotfiles have a bootstrap script that switches on `uname` to execute setup for Debian/Ubuntu or OS X.
+The dotfiles have a bootstrap script that switches on `uname` to execute setup for Debian/Ubuntu or OS X.

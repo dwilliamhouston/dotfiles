@@ -45,7 +45,8 @@ $ sudo apt install yadm
 ```
 Mac
 ```console
-$ sudo apt install yadm
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install yadm
 ```
 
 
@@ -53,6 +54,7 @@ $ sudo apt install yadm
 
 Now that yadm is installed, we can go install these dotfiles. They should do everything else for us!
 
+Linux and Mac
 ```console
 yadm clone https://github.com/dwilliamhouston/dotfiles.git
 ```

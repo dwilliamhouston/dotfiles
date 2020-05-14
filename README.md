@@ -2,7 +2,7 @@
 
 This repository contains dotfiles and stuff for my machine. You'll use [yadm](https://thelocehiliosan.github.io/yadm/) to install almost everything.
 
-Before we get started, let's create SSH keys, add them to GitHub, and install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh):
+Before we get started, let's create SSH keys, add them to GitHub.
 
 ## Create SSH keys
 

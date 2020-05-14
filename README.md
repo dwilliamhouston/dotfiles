@@ -41,7 +41,7 @@ $ sudo apt install yadm
 Now that yadm is installed, we can go install these dotfiles. They should do everything else for us!
 
 ```console
-yadm clone https://github.com/arschles/dotfiles.git
+yadm clone https://github.com/dwilliamhouston/dotfiles.git
 ```
 
 >The dotfiles have a bootstrap script that switches on `uname` to execute setup for Debian/Ubuntu or OS X.

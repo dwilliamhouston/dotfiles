@@ -6,11 +6,18 @@ Before we get started, let's create SSH keys, add them to GitHub, and install [o
 
 ## Create SSH keys
 
-First, use some command line magic to create your SSH keys. You'll need these for a few things later, including to install the wonderful oh-my-zsh:
+First, use some command line magic to create your SSH keys. You'll need these for a few things later.
 
+Linux
 ```console
 $ sudo apt update
 $ sudo apt install ssh
+$ ssh-keygen -t rsa -b 4096 -C "david@dwilliamshome.com"
+$ eval $(ssh-agent -s)
+$ ssh-add ~/.ssh/id_rsa
+```
+Mac
+```console
 $ ssh-keygen -t rsa -b 4096 -C "david@dwilliamshome.com"
 $ eval $(ssh-agent -s)
 $ ssh-add ~/.ssh/id_rsa
@@ -32,9 +39,15 @@ Then, go to [github.com/settings/ssh/new](https://github.com/settings/ssh/new), 
 
 Now that you've got all your keys set up, let's get our `apt` package manager ready, and install [yadm](https://thelocehiliosan.github.io/yadm/):
 
+Linux
 ```console
 $ sudo apt install yadm
 ```
+Mac
+```console
+$ sudo apt install yadm
+```
+
 
 ## Install dotfiles
 

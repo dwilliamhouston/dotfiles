@@ -35,6 +35,31 @@ $ cat ~/.ssh/id_rsa.pub
 
 Then, go to [github.com/settings/ssh/new](https://github.com/settings/ssh/new), name the key (for example: "My new machine!") in the Title box, and paste the public key value into the "Key" box
 
+If you have Two-Factor Authentication enbled on Github do the following:
+
+You'll need to store your personal access token in your netrc as two factor authentication prevents your username/password from being used on the command line. To fix this follow these steps:
+
+Mac or Linux
+1. Go to https://github.com/settings/tokens/new
+2. Put in the name "Command Line" for the Token Description
+3. For the scopes, enable all the top scopes (e.g., click the checkboxes: repo, admin:org, etc, etc...), then click Generate Token.  You'll need to copy the token it generates, it's in a green window with a clipboard icon next to it.
+4. Open a terminal window (Go to the Applications folder, Utilities folder, run Terminal application)
+5. touch ~/.netrc; open -a "TextEdit" ~/.netrc (or the CLI editor of your choice)
+
+Enter:
+  machine github.com
+  login [your_github_login_name]
+  password [the_token_copied_from_above]
+  machine api.github.com
+  login [your_github_login_name]
+  password [the_token_copied_from_above]
+  Make sure to replace [your_github_login_name] with your github login, NOT your email address. Make sure to replace [the_token_copied_from_above] with the token.
+
+6. Save these changes, and close the editor.
+7. Run chmod 600 ~/.netrc in the terminal
+
+To test this run curl -n https://api.github.com/user, you should see your user information in a JSON response. You can also test this by trying to clone out a private https repo, it should no longer ask for your password.
+
 ## Install Yadm
 
 Now that you've got all your keys set up, let's get 'yadm' setup.
